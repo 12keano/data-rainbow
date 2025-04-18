@@ -1,0 +1,7 @@
+app.post('/chart', (req, res) => {
+  const { type, seed } = req.body;
+  const chartData = generateChartData(type, seed);
+  res.json(chartData);
+});
+
+app.listen(3000, () => console.log('Data Rainbow API running on port 3000'));
